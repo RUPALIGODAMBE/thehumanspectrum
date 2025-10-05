@@ -117,7 +117,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     return;
   }
 
-  fetch("https://ths-google-script-proxy.braveheartask.workers.dev", {
+  fetch("https://ths-google-sheets-negotiator.connect-thehumanspectrum.workers.dev", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     // headers: {"content-type":"application/json"},
