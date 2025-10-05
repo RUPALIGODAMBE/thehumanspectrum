@@ -1,0 +1,81 @@
+<footer class="w-full bg-primary-500 flex flex-col gap-4 lg:flex-row scroll-mt-24">
+    <div id="contact" class="flex flex-col gap-6 items-center justify-center lg:w-2/3 lg:flex-row lg:relative">
+        <div class="lg:w-1/3">
+            <img src="../assets/logo_grey.png" alt="Grey Logo" class="pt-5 w-24 left-0 bottom-0 lg:absolute lg:w-42">
+        </div>
+        <div class="lg:w-2/3 lg:flex lg:flex-row lg:gap-4 lg:h-full">
+            <div id="footer-links"
+                class="flex flex-col text-white mt-4 items-center mb-4 lg:w-1/3 lg:text-xl lg:mt-20 lg:items-baseline lg:gap-2">
+                <a href="#whoweare">Who We Are</a>
+                <a href="#whatwedo">What We Do</a>
+                <a href="mannmade.html">MannMade</a>
+            </div>
+            <div class="h-px bg-white w-[40vw] mx-auto lg:hidden"></div>
+            <div id="contact-info"
+                class="text-white flex flex-col items-center mb-4 lg:mt-20 lg:w- lg:items-baseline lg:gap-2">
+                <h2 class="font-bold lg:text-2xl">CONTACT US</h2>
+                <p>Phone: 1234567890</p>
+                <p>Email: <a href="#" class="underline">connect@thehumanspectrum.com</a></p>
+                <div id="socials" class="flex flex-row text-white gap-4">
+                    <a><i class="fa-brands fa-facebook"></i></a>
+                    <a><i class="fa-brands fa-instagram"></i></a>
+                    <a><i class="fa-brands fa-x-twitter"></i></a>
+                    <a><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cta-form" class="bg-accent-500 p-5 flex flex-col font-primary lg:w-1/3">
+        <h1 class="font-bold text-2xl self-center sm:text-4xl">We Are Listening...</h1>
+        <p class="text-xl sm:text-2xl">If you have any question, you can contact us. Please fill out the form below.
+        </p>
+        <form id="contactForm" action="/submit" method="post">
+            <div class="mt-5 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-6">
+                <div class="sm:col-span-3">
+                    <label for="name" class="block text-sm/6 font-medium text-gray-900 sm:text-lg">Name</label>
+                    <div class="mt-2">
+                        <input id="name" type="text" name="name" autocomplete="given-name" required
+                            class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-primary-500 sm:text-sm/6" />
+                    </div>
+                </div>
+                <div class="sm:col-span-3">
+                    <label for="phone" class="block text-sm/6 font-medium text-gray-900 sm:text-lg">Phone</label>
+                    <div class="mt-2">
+                        <input id="phone" type="number" name="phone" autocomplete="phone" required
+                            class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-primary-500 sm:text-sm/6" />
+                    </div>
+                </div>
+                <div class="sm:col-span-3">
+                    <label for="email" class="block text-sm/6 font-medium text-gray-900 sm:text-lg">Email</label>
+                    <div class="mt-2">
+                        <input id="email" type="email" name="email" autocomplete="email" required
+                            class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-primary-500 sm:text-sm/6" />
+                    </div>
+                </div>
+                <div class="sm:col-span-3">
+                    <label for="city" class="block text-sm/6 font-medium text-gray-900 sm:text-lg">City</label>
+                    <div class="mt-2">
+                        <input id="city" type="text" name="city" autocomplete="city" required
+                            class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-primary-500 sm:text-sm/6" />
+                    </div>
+                </div>
+                <div class="sm:col-span-full">
+                    <label for="message" class="block text-sm/6 font-medium text-gray-900 sm:text-lg">Message</label>
+                    <div class="mt-2">
+                        <textarea id="message" type="text" name="message" autocomplete="message" rows="3"
+                            class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-primary-500 sm:text-sm/6"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6 flex items-center justify-end gap-x-6">
+                <button type="button" class="text-sm/6 font-semibold text-gray-900 sm:text-lg"
+                    onclick="">Cancel</button>
+                <button type="submit"
+                    class="rounded-md bg-primary-500 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:text-lg">Save</button>
+            </div>
+        </form>
+    </div>
+    <!-- <p id="successMsg" class="text-green-600 font-medium text-center mt-4 hidden">
+            ✅ Your form has been submitted successfully!
+        </p> -->
+</footer>

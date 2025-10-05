@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+    <!-- <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Schoolbell&display=swap"
+        rel="stylesheet" /> -->
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/ecce4b4e98.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+    <title>The Human Spectrum</title>
+</head>
+
+<body class="font-secondary">
+    <header>
+        <nav class="relative w-full bg-secondary-500 sm:opacity-75 z-50 md:fixed">
+            <div class="max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div class="relative flex h-20 items-center justify-between">
+                    <div class="flex items-center mt-8">
+                        <a href="index.html">
+                            <img src="assets/logo_color.png" alt="The Human Spectrum Logo" class="h-20" />
+                        </a>
+                    </div>
+                    <div class="flex items-center pr-3 sm:hidden">
+                        <button type="button" command="--toggle" commandfor="mobile-menu"
+                            class="relative inline-flex items-center justify-center rounded-md p-2 text-primary-500 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-primary-500">
+                            <span class="absolute -inset-0.5"></span>
+                            <span class="sr-only">Open main menu</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-slot="icon"
+                                aria-hidden="true" class="size-8 in-aria-expanded:hidden">
+                                <path d="M3.75 6h16.5 M3.75 12.5h16.5 M3.75 19h16.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-slot="icon"
+                                aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
+                                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-10 sm:space-x-4">
+                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+                            <a href="#whoweare" aria-current="page"
+                                class="rounded-md px-3 py-2 text-xl font-medium text-primary-t hover:text-white">Who We
+                                Are</a>
+                            <a href="#whatwedo"
+                                class="rounded-md px-3 py-2 text-xl font-medium text-primary-t hover:text-white">What We
+                                Do</a>
+                            <a href="mannmade.html"
+                                class="rounded-md px-3 py-2 text-xl font-medium text-primary-t hover:text-white">MannMade</a>
+                            <a href="#contact"
+                                class="rounded-md px-3 py-2 text-xl font-medium text-primary-t hover:text-white">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
+                <div class="flex flex-col items-center justify-center space-y-1 px-2 pt-2 pb-3">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+                    <a href="#whoweare" aria-current="page"
+                        class="block rounded-md px-3 py-2 text-xl font-medium text-primary-t hover:text-white">Who We
+                        Are</a>
+                    <a href="#whatwedo"
+                        class="block rounded-md px-3 py-2 text-xl font-medium text-primary-t hover:text-white">What We
+                        Do</a>
+                    <a href="mannmade.html"
+                        class="block rounded-md px-3 py-2 text-xl font-medium text-primary-t hover:text-white">MannMade</a>
+                    <a href="#contact"
+                        class="block rounded-md px-3 py-2 text-xl font-medium text-primary-t hover:text-white">Contact</a>
+                </div>
+            </el-disclosure>
+        </nav>
+    </header>
+    <main>
+        <section id="hero"
+            class="aspect-[16/9] bg-cover bg-center bg-[url(assets/landing/Landing_page_image_1_comp.webp)] relative">
+            <div class="absolute aspect-[16/9] inset-0 bg-gradient-to-b from-transparent to-gray-700"></div>
+            <div
+                class="absolute top-8 flex flex-row px-4 items-center gap-2 w-full mt-4 sm:mt-10 lg:px-10 lg:mt-25 md:mt-28 md:px-15">
+                <div class="basis-2/3">
+                    <img src="assets/landing/Landing_page_shape_1_14Sep.svg" alt=""
+                        class="w-[80%] ml-12 lg:ml-28 md:ml-14 xl:ml-40">
+                </div>
+                <div class="basis-1/3 flex flex-col items-center justify-center gap-4 lg:flex-1/3">
+                    <i id="playBtn"
+                        class="fa-regular fa-circle-play text-white text-2xl hover:text-primary-500 cursor-pointer lg:text-8xl sm:text-6xl"></i>
+                    <div class="font-primary text-xs text-center text-white lg:text-2xl sm:text-xl">WATCH VIDEO</div>
+                </div>
+                <div id="pipPlayer"
+                    class="hidden fixed bg-black border-2 border-solid border-primary-500 overflow-hidden z-60 rounded-lg w-1/2 aspect-video">
+                    <iframe src="" frameborder="0" id="youtubeFrame" class="w-full h-full border-none"
+                        allow="autoplay;encrypted-media" allowfullscreen>
+                    </iframe>
+                    <button id="closeBtn" class="absolute top-1 right-1 m-1 bg-none text-sm cursor-pointer">
+                        <i class="fa-solid fa-xmark close text-primary-500"></i>
+                    </button>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section id="whoweare" class="mt-5 scroll-mt-24" data-aos="fade-up">
+            <div
+                class="flex flex-col justify-center items-center px-8 md:flex-row-reverse md:gap-6 md:px-10 lg:px-20 lg:gap-10 xl:px-40 xl:gap-10">
+                <img src="assets/landing/Landing_Page_image_2_new.png" alt="Activity Photo"
+                    class="w-80 md:w-xs lg:w-md xl:w-md">
+                <div class="md:w-px md:h-80 md:bg-gray-500"></div>
+                <div class="mt-2">
+                    <h2
+                        class="font-primary text-2xl text-secondary-500 font-bold md:text-2xl lg:text-3xl lg:mb-2 xl:text-4xl xl:mb-2">
+                        Who we are
+                    </h2>
+                    <p class="text-lg md:text-xl lg:text-xl xl:text-2xl">
+                        We are a collective of therapists, educators, artists, psychologists, and advocates who use
+                        expressive arts, drama, and education to support psychological well-being and drive societal
+                        change. Our work focuses on empowering children and adults with special needs, while also
+                        reshaping environments.
+                    </p>
+                    <p class="text-lg text-primary-t md:text-xl lg:text-xl xl:text-2xl lg:font-bold">
+                        We exist to celebrate
+                        neurodiversity, strengthen
+                        ecosystems, and transform
+                        attitudes - <span class="italic">one human connection at
+                            a time.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="neurodiversity" class="px-6 mt-5 justify-center md:mt-8 lg:px-16" data-aos="fade-up">
+            <div class="p-4 bg-primary-500 rounded-lg">
+                <h2 class="text-secondary-500 text-xl font-bold md:text-2xl lg:text-4xl font-primary">
+                    Let’s talk Neurodiversity
+                </h2>
+                <p class="text-white text-justify md:text-xl lg:text-2xl">
+                    Just like each of us has unique fingerprints, each of us has a unique brain. We think, feel, learn,
+                    and connect in different ways.<br>
+                    Some people’s brains work a little differently than what society calls “normal.” These differences
+                    may be in speech, movement, learning, or social interaction. We often call them “neurodivergent.” But
+                    in truth, all of us are neurodiverse. The world we live in is mostly built for one kind of brain:the
+                    majority brain type or ‘neurotypicals’.<br>
+                    So, when someone’s brain works differently, we often label them as odd or less. But imagine this - if
+                    their brain type had been the majority,<br>
+                    they would have been the norm.
+                </p>
+            </div>
+            <div class="mt-2 flex md:px-8 md:mt-4">
+                <h2 class="flex-3/4 font-bold self-center md:text-2xl lg:text-4xl font-secondary text-primary-t">
+                    There is no one “right” way to be human
+                </h2>
+                <div class="flex-1/4 xl:w-6">
+                    <img src="assets/cookie-jar-alt.png" alt="" class="">
+                </div>
+            </div>
+        </section>
+
+        <section id="whatwedo" class="mt-10 scroll-mt-40" data-aos="fade-up">
+            <div
+                class="flex flex-col items-center justify-center px-8 md:flex-row md:gap-6 md:px-10 lg:px-20 lg:gap-10 xl:px-40 xl:gap-10">
+                <img src="assets/landing/Landing_page_image_3_new.png" alt="Activity Image"
+                    class="w-80 md:w-xs lg:w-md xl:w-md">
+                <div class="md:w-px md:h-80 md:bg-gray-500"></div>
+                <div class="max-w-md mx-auto divide-gray-30 flex flex-col">
+                    <h1 class="ml-14 text-secondary-500 text-2xl font-bold lg:text-3xl lg:ml-14 lg:mb-2 font-primary">What We Do</h1>
+                    <div class="accordion-item">
+                        <button
+                            class="accordion-header flex justify-baseline items-center w-full py-3 text-lg font-medium focus:outline-none cursor-pointer">
+                            <i
+                                class="fa-solid fa-caret-right text-primary-500 text-2xl transition-transform duration-300"></i>
+                            <h2 class="ml-10 text-primary-t text-lg lg:text-xl xl:text-2xl">Collaboration with NGOs</h2>
+                        </button>
+                        <div class="accordion-body overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+                            <p class="p-3 text-primary-t">
+                                Expressive arts and Drama session
+                                <a href="collaboration.html" class="text-blue-700 underline">Read More >></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button
+                            class="accordion-header flex justify-baseline items-center w-full py-3 text-lg font-medium focus:outline-none cursor-pointer">
+                            <i
+                                class="fa-solid fa-caret-right text-primary-500 text-2xl transition-transform duration-300"></i>
+                            <h2 class="ml-10 text-primary-t text-lg lg:text-xl xl:text-2xl">Early Intervention Services
+                            </h2>
+                        </button>
+                        <div class="accordion-body overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+                            <p class="p-3 text-primary-t">
+                                Screening and identification of Neurodevelopmental
+                                conditions and Autism Parent Coaching
+                                <a href="intervention.html" class="text-blue-700 underline">Read More >></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button
+                            class="accordion-header flex justify-baseline items-center w-full py-3 text-lg font-medium focus:outline-none cursor-pointer">
+                            <i
+                                class="fa-solid fa-caret-right text-primary-500 text-2xl transition-transform duration-300"></i>
+                            <h2 class="ml-10 text-primary-t text-lg lg:text-xl xl:text-2xl">Awareness and Sensitization
+                            </h2>
+                        </button>
+                        <div class="accordion-body overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+                            <p class="p-3 text-primary-t">
+                                Content creation, Group Sessions and Plays
+                                <a href="awareness.html" class="text-blue-700 underline">Read More >></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button
+                            class="accordion-header flex justify-baseline items-center w-full py-3 text-lg font-medium focus:outline-none cursor-pointer">
+                            <i
+                                class="fa-solid fa-caret-right text-primary-500 text-2xl transition-transform duration-300"></i>
+                            <h2 class="ml-10 text-primary-t text-lg lg:text-xl xl:text-2xl">MannMade</h2>
+                        </button>
+                        <div class="accordion-body overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
+                            <p class="p-3 text-primary-t">
+                                An initiative to create earning opportunities for PWD by
+                                meeting at their level
+                                <a href="mannmade.html" class="text-blue-700 underline">Read More >></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="clients">
+            <div class="overflow-hidden py-8 mt-2 mb-2 lg:mt-6 lg:mb-6">
+                <div id="logo-track" class="logoTrack flex flex-nowrap will-change-transform w-max">
+                    <div class="logo-track-content flex flex-nowrap gap-12">
+                        <img src="assets/collaborators/Landing page collaborator Aajol.png"
+                            class="h-16 ml-12 w-auto lg:h-24" alt="Aajol" />
+                        <img src="assets/collaborators/Landing page collaborator Savali.png" class="h-16 w-auto lg:h-24"
+                            alt="Savali" />
+                        <img src="assets/collaborators/Langing page collaborator Aagastya.png"
+                            class="h-16 w-auto lg:h-24" alt="Aagastya" />
+                        <img src="assets/collaborators/Langing page collaborator Millenium.png"
+                            class="h-16 w-auto lg:h-24" alt="Millenium" />
+                        <img src="assets/collaborators/Langing page collaborator Modern.png" class="h-16 w-auto lg:h-24"
+                            alt="Modern" />
+                        <img src="assets/collaborators/Langing page collaborator Sacred Heart.png"
+                            class="h-16 w-auto lg:h-24" alt="Sacred Heart" />
+                        <img src="assets/collaborators/Langing page collaborator Smit.png" class="h-16 w-auto lg:h-24"
+                            alt="Smit" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="registration">
+            <div class="flex flex-row bg-collab-500 p-8 text-white text-xl justify-around
+            md:text-2xl lg:text-4xl">
+                <!-- <h1>UPCOMING SESSIONS</h1>
+                <h1><a href="" class="underline">Register</a></h1> -->
+                <div class="overflow-hidden text-white">
+                    <div id="ticker" class="ticker flex w-max">
+                        <div class="ticker-content ml-4">
+                            📢 Welcome to The Human Spectrum. Watch this space for our regular workshop updates.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full bg-primary-500 flex flex-col gap-4 lg:flex-row scroll-mt-24 lg:relative">
+        <div id="contact" class="flex flex-col gap-2 items-center justify-center lg:w-2/3 lg:flex-row lg:relative">
+            <div class="lg:w-1/3">
+                <img src="assets/logo_grey.png" alt="Grey Logo" class="pt-5 w-24 left-0 bottom-0 lg:absolute lg:w-42">
+            </div>
+            <div class="lg:w-2/3 lg:flex lg:flex-row lg:gap-4 lg:h-full gap-4">
+                <div id="footer-links"
+                    class="flex flex-col text-white mt-4 items-center mb-4 lg:w-1/3 lg:text-xl lg:mt-20 lg:items-baseline lg:gap-2">
+                    <a href="#whoweare">Who We Are</a>
+                    <a href="#whatwedo">What We Do</a>
+                    <a href="mannmade.html">MannMade</a>
+                </div>
+                <div class="h-px bg-white w-[40vw] mx-auto mb-4 block lg:hidden"></div>
+                <div id="contact-info"
+                    class="text-white flex flex-col items-center mb-4 lg:mt-20 lg:w- lg:items-baseline lg:gap-2">
+                    <h2 class="font-bold lg:text-2xl">CONTACT US</h2>
+                    <!-- <p>Phone: 1234567890</p> -->
+                    <p>Email: <a href="#" class="underline">connect@thehumanspectrum.com</a></p>
+                    <div id="socials" class="flex flex-row text-white gap-4 mt-2">
+                        <a href="https://www.facebook.com/TheHumanSpectrum1" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/the_human_spectrum/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                        <!-- <a><i class="fa-brands fa-x-twitter"></i></a> -->
+                        <!-- <a><i class="fa-brands fa-youtube"></i></a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="cta-form" class="bg-accent-500 p-5 flex flex-col lg:w-1/3">
+            <h1 class="font-bold text-2xl self-center sm:text-4xl">We Are Listening...</h1>
+            <p class="text-xl sm:text-2xl">If you have any question, you can contact us. Please fill out the form below.
+            </p>
+            <form id="contactForm" action="/submit" method="post">
+                <div class="mt-3 grid grid-cols-1 gap-x-6 gap-y-1 sm:grid-cols-6 mb-4">
+                    <div class="sm:col-span-3">
+                        <label for="name" class="block text-sm/6 font-medium text-gray-900 sm:text-lg">Name</label>
+                        <div class="mt-2">
+                            <input id="name" type="text" name="name" autocomplete="given-name" required
+                                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-primary-500 sm:text-sm/6" />
+                        </div>
+                    </div>
+                    <div class="sm:col-span-3">
+                        <label for="phone" class="block text-sm/6 font-medium text-gray-900 sm:text-lg">Phone</label>
+                        <div class="mt-2">
+                            <input id="phone" type="number" name="phone" autocomplete="phone" required
+                                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-primary-500 sm:text-sm/6" />
+                        </div>
+                    </div>
+                    <div class="sm:col-span-3">
+                        <label for="email" class="block text-sm/6 font-medium text-gray-900 sm:text-lg">Email</label>
+                        <div class="mt-2">
+                            <input id="email" type="email" name="email" autocomplete="email" required
+                                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-primary-500 sm:text-sm/6" />
+                        </div>
+                    </div>
+                    <div class="sm:col-span-3">
+                        <label for="city" class="block text-sm/6 font-medium text-gray-900 sm:text-lg">City</label>
+                        <div class="mt-2">
+                            <input id="city" type="text" name="city" autocomplete="city" required
+                                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-primary-500 sm:text-sm/6" />
+                        </div>
+                    </div>
+                    <div class="sm:col-span-full">
+                        <label for="message"
+                            class="block text-sm/6 font-medium text-gray-900 sm:text-lg">Message</label>
+                        <div class="mt-2">
+                            <textarea id="message" type="text" name="message" autocomplete="message" rows="2"
+                                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-primary-500 sm:text-sm/6"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-recaptcha" data-sitekey="6Lf6pbArAAAAABv5qpZgIdbyidt4GDZ-_mB936Qv"></div>
+                <div class="mt-2 flex items-center justify-center gap-8">
+                    <button type="button" class="text-sm/6 font-semibold text-gray-900 sm:text-lg cursor-pointer"
+                        onclick="">Cancel</button>
+                    <button type="submit"
+                        class="rounded-md bg-primary-500 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:text-lg cursor-pointer">Save</button>
+                </div>
+            </form>
+        </div>
+        <!-- <p id="successMsg" class="text-green-600 font-medium text-center mt-4 hidden">
+            ✅ Your form has been submitted successfully!
+        </p> -->
+        <div class="lg:absolute lg:bottom-0 lg:left-0 w-full text-center text-white text-sm py-2">
+            © 2025 The Human Spectrum. All rights reserved.
+        </div>
+    </footer>
+    <script type="module" src="main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

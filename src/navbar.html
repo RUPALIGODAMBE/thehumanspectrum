@@ -1,0 +1,55 @@
+<nav class="relative w-full bg-secondary-500 sm:opacity-75 z-50 md:fixed">
+    <div class="max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-20 items-center justify-between">
+            <div class="flex items-center mt-8">
+                <img src="../assets/logo_color.png" alt="The Human Spectrum Logo" class="h-20" />
+            </div>
+            <div class="flex items-center pr-3 sm:hidden">
+                <button type="button" command="--toggle" commandfor="mobile-menu"
+                    class="relative inline-flex items-center justify-center rounded-md p-2 text-primary-500 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-primary-500">
+                    <span class="absolute -inset-0.5"></span>
+                    <span class="sr-only">Open main menu</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-slot="icon"
+                        aria-hidden="true" class="size-8 in-aria-expanded:hidden">
+                        <path d="M3.75 6h16.5 M3.75 12.5h16.5 M3.75 19h16.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-slot="icon"
+                        aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
+                        <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-10 sm:space-x-4">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+                    <a href="#whoweare" aria-current="page"
+                        class="rounded-md px-3 py-2 text-xl font-medium text-primary-t hover:text-white">Who We
+                        Are</a>
+                    <a href="#whatwedo"
+                        class="rounded-md px-3 py-2 text-xl font-medium text-primary-t hover:text-white">What We
+                        Do</a>
+                    <a href="mannmade.html"
+                        class="rounded-md px-3 py-2 text-xl font-medium text-primary-t hover:text-white">MannMade</a>
+                    <a href="#contact"
+                        class="rounded-md px-3 py-2 text-xl font-medium text-primary-t hover:text-white">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
+        <div class="flex flex-col items-center justify-center space-y-1 px-2 pt-2 pb-3">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+            <a href="#whoweare" aria-current="page"
+                class="block rounded-md px-3 py-2 text-xl font-medium text-primary-t hover:text-white">Who We
+                Are</a>
+            <a href="#whatwedo"
+                class="block rounded-md px-3 py-2 text-xl font-medium text-primary-t hover:text-white">What We
+                Do</a>
+            <a href="mannmade.html"
+                class="block rounded-md px-3 py-2 text-xl font-medium text-primary-t hover:text-white">MannMade</a>
+            <a href="#contact"
+                class="block rounded-md px-3 py-2 text-xl font-medium text-primary-t hover:text-white">Contact</a>
+        </div>
+    </el-disclosure>
+</nav>

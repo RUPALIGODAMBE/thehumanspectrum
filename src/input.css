@@ -1,0 +1,55 @@
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary-500: oklch(0.4936 0.0663 192.2);
+  --color-secondary-500: oklch(0.7649 0.134 77.67);
+  --color-accent-500: oklch(0.7243 0.0463 298.2);
+  --color-primary-t: oklch(0.4823 0 0);
+  --color-secondary-t: oklch(0 0 0);
+  --color-collab-500: oklch(0.7901 0.0361 158.41);
+
+  --font-decorative: "Schoolbell", sans-serif;
+  --font-secondary: "Open Sans", sans-serif;
+  --font-primary: "Lato", sans-serif;
+
+  --breakpoint-xs: 25rem;
+
+  --logo-track-width: 100%;
+  --logo-track-duration: 20s;
+
+  @keyframes logo-track-move {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(var(--logo-track-width) * -1));
+    }
+  }
+
+  --ticker-width: 100%;
+  --ticker-duration: 20s;
+
+  @keyframes ticker-move {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(var(--ticker-width) * -1));
+    }
+  }
+}
+
+.logoTrack {
+  animation: logo-track-move var(--logo-track-duration) linear infinite;
+}
+
+.ticker {
+  animation: ticker-move var(--ticker-duration) linear infinite;
+}
+
+.g-recaptcha {
+  transform: scale(0.7);
+  transform-origin: 0 0;
+}
+
