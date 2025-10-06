@@ -11,7 +11,11 @@ Deployment Id:
 AKfycby570jX_cQZq-d_PEzLAiB3TDonJOUgWZX8VQMWdSzp0lBPYYw0aaV1lDgKPXkkk4O1
 
 Web app
-https://script.google.com/macros/s/AKfycby570jX_cQZq-d_PEzLAiB3TDonJOUgWZX8VQMWdSzp0lBPYYw0aaV1lDgKPXkkk4O1/exec
+https://script.google.com/macros/s/AKfycbylz_JTHRO4Z3qvLRJ4B91QxyvLhSnYDVSO-4M7hw6g3oJUHbp2CYNNDdkG-Dw9coyd/exec
 
 Library URL
 https://script.google.com/macros/library/d/1isGxvqs4UoCzAYxn7bNAFC8U_MFc7NWB87c9xXfSCs9-3EpHCGAr7bxU/2
+
+
+Cloudflare
+https://ths-google-sheets-negotiator.connect-thehumanspectrum.workers.dev
