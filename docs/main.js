@@ -5,10 +5,10 @@ const closeBtn = document.getElementById("closeBtn");
 
 const videoUrl = "https://www.youtube.com/embed/zlfgLXqvx_M?autoplay=1";
 
-playBtn.addEventListener("click", () => {
-  youtubeFrame.src = videoUrl;
-  pipPlayer.classList.remove("hidden");
-});
+// playBtn.addEventListener("click", () => {
+//   youtubeFrame.src = videoUrl;
+//   pipPlayer.classList.remove("hidden");
+// });
 
 closeBtn.addEventListener("click", () => {
   youtubeFrame.src = "";
