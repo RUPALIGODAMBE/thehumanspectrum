@@ -3,12 +3,12 @@ const pipPlayer = document.getElementById("pipPlayer");
 const youtubeFrame = document.getElementById("youtubeFrame");
 const closeBtn = document.getElementById("closeBtn");
 
-const videoUrl = "https://www.youtube.com/embed/zlfgLXqvx_M?autoplay=1";
+const videoUrl = "https://www.youtube.com/embed/ODxwrovSvl4?autoplay=1";
 
-// playBtn.addEventListener("click", () => {
-//   youtubeFrame.src = videoUrl;
-//   pipPlayer.classList.remove("hidden");
-// });
+playBtn.addEventListener("click", () => {
+  youtubeFrame.src = videoUrl;
+  pipPlayer.classList.remove("hidden");
+});
 
 closeBtn.addEventListener("click", () => {
   youtubeFrame.src = "";
@@ -107,6 +107,7 @@ window.addEventListener("load", setupTextTicker);
 //   setTimeout(() => successMsg.classList.add("hidden"), 3000);
 // });
 
+
 document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -117,19 +118,24 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     return;
   }
 
-  fetch("https://ths-google-sheets-negotiator.connect-thehumanspectrum.workers.dev", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    // headers: {"content-type":"application/json"},
-    body: JSON.stringify({
-      token: token,
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      phone: document.getElementById("phone").value,
-      city: document.getElementById("city").value,
-      message: document.getElementById("message").value,
-    }),
-  })
+  fetch(
+    "https://ths-google-script-proxy.braveheartask.workers.dev",
+/*"https://ths-google-sheets-negotiator.connect-thehumanspectrum.workers.dev",*/
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      // headers: {"content-type":"application/json"},
+      body: JSON.stringify({
+        type: "Contact",
+        token: token,
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        city: document.getElementById("city").value,
+        message: document.getElementById("message").value,
+      }),
+    }
+  )
     .then((res) => res.json())
     .then((data) => {
       if (data.message) {
@@ -139,7 +145,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
           grecaptcha.reset();
         }
       } else {
-        alert("Network error: " + data.error)
+        alert("Network error: " + data.error);
       }
     })
     .catch((err) => alert("Network error: " + err.error));
