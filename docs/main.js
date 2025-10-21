@@ -8,11 +8,13 @@ const videoUrl = "https://www.youtube.com/embed/ODxwrovSvl4?autoplay=1";
 playBtn.addEventListener("click", () => {
   youtubeFrame.src = videoUrl;
   pipPlayer.classList.remove("hidden");
+  pipPlayer.classList.add("flex");
 });
 
 closeBtn.addEventListener("click", () => {
   youtubeFrame.src = "";
   pipPlayer.classList.add("hidden");
+  pipPlayer.classList.remove("flex");
 });
 
 document.querySelectorAll(".accordion-header").forEach((header) => {

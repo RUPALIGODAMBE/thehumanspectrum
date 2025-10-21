@@ -92,21 +92,23 @@
                         class="fa-regular fa-circle-play text-white text-2xl hover:text-primary-500 cursor-pointer lg:text-8xl sm:text-6xl"></i>
                     <div class="font-primary text-xs text-center text-white lg:text-2xl sm:text-xl">WATCH VIDEO</div>
                 </div>
-                <div id="pipPlayer"
-                    class="hidden fixed bg-black border-2 border-solid border-primary-500 overflow-hidden z-60 rounded-lg w-1/2 aspect-video">
-                    <iframe src="" frameborder="0" id="youtubeFrame" class="w-full h-full border-none"
-                        allow="autoplay;encrypted-media" allowfullscreen>
-                    </iframe>
-                    <button id="closeBtn" class="absolute top-1 right-1 m-1 bg-none text-sm cursor-pointer">
-                        <i class="fa-solid fa-xmark close text-primary-500"></i>
-                    </button>
+                <div id="pipPlayer" class="fixed inset-0 items-center justify-center bg-black/70 z-60 hidden">
+                    <div
+                        class="relative bg-black border-2 border-solid border-primary-500 overflow-hidden rounded-lg w-[80%] sm:w-[60%] aspect-video md:w-[70%] lg:w-[60%] max-w-5xl transform -translate-y-16 sm:-translate-y-10">
+                        <iframe src="" frameborder="0" id="youtubeFrame" class="w-full h-full border-none rounded-lg"
+                            allow="autoplay;encrypted-media" allowfullscreen>
+                        </iframe>
+                        <button id="closeBtn" class="absolute top-1 right-1 m-1 bg-none text-sm w-8 h-8 cursor-pointer">
+                            <i class="fa-solid fa-xmark close text-primary-500"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
 
 
         </section>
 
-        <section id="whoweare" class="mt-5 scroll-mt-24" data-aos="fade-up">
+        <section id="whoweare" class="mt-5 scroll-mt-24">
             <div
                 class="flex flex-col justify-center items-center px-8 md:flex-row-reverse md:gap-6 md:px-10 lg:px-20 lg:gap-10 xl:px-40 xl:gap-10">
                 <img src="assets/landing/Landing_Page_image_2_new.png" alt="Activity Photo"
@@ -143,10 +145,12 @@
                     Just like each of us has unique fingerprints, each of us has a unique brain. We think, feel, learn,
                     and connect in different ways.<br>
                     Some people’s brains work a little differently than what society calls “normal.” These differences
-                    may be in speech, movement, learning, or social interaction. We often call them “neurodivergent.” But
+                    may be in speech, movement, learning, or social interaction. We often call them “neurodivergent.”
+                    But
                     in truth, all of us are neurodiverse. The world we live in is mostly built for one kind of brain:the
                     majority brain type or ‘neurotypicals’.<br>
-                    So, when someone’s brain works differently, we often label them as odd or less. But imagine this - if
+                    So, when someone’s brain works differently, we often label them as odd or less. But imagine this -
+                    if
                     their brain type had been the majority,<br>
                     they would have been the norm.
                 </p>
@@ -168,7 +172,8 @@
                     class="w-80 md:w-xs lg:w-md xl:w-md">
                 <div class="md:w-px md:h-80 md:bg-gray-500"></div>
                 <div class="max-w-md mx-auto divide-gray-30 flex flex-col">
-                    <h1 class="ml-14 text-secondary-500 text-2xl font-bold lg:text-3xl lg:ml-14 lg:mb-2 font-primary">What We Do</h1>
+                    <h1 class="ml-14 text-secondary-500 text-2xl font-bold lg:text-3xl lg:ml-14 lg:mb-2 font-primary">
+                        What We Do</h1>
                     <div class="accordion-item">
                         <button
                             class="accordion-header flex justify-baseline items-center w-full py-3 text-lg font-medium focus:outline-none cursor-pointer">
@@ -294,8 +299,10 @@
                     <!-- <p>Phone: 1234567890</p> -->
                     <p>Email: connect@thehumanspectrum.in</p>
                     <div id="socials" class="flex flex-row text-white gap-4 mt-2">
-                        <a href="https://www.instagram.com/the_human_spectrum/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/TheHumanSpectrum1" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/the_human_spectrum/" target="_blank"
+                            rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/TheHumanSpectrum1" target="_blank"
+                            rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
                         <!-- <a><i class="fa-brands fa-x-twitter"></i></a> -->
                         <!-- <a><i class="fa-brands fa-youtube"></i></a> -->
                     </div>
