@@ -95,7 +95,7 @@
 }
 
 @font-face {
-    font-family: "Schoolbell", cursive;
+    font-family: "Schoolbell";
     src: url('assets/fonts/Schoolbell/Schoolbell-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
