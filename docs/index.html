@@ -11,7 +11,6 @@
         rel="stylesheet" /> -->
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="./output.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="preload" href="assets/landing/Landing_page_image_1.webp" as="image" fetchpriority="high">
     <script src="https://kit.fontawesome.com/ecce4b4e98.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
@@ -79,9 +78,9 @@
         </nav>
     </header>
     <main>
-        <section id="hero"
-            class="relative aspect-[16/9] overflow-hidden">
-            <img src="assets/landing/Landing_page_image_1.webp" alt="Hero Image" class="absolute inset-0 w-full h-full object-cover">
+        <section id="hero" class="relative aspect-[16/9] overflow-hidden">
+            <img src="assets/landing/Landing_page_image_1.webp" alt="Hero Image"
+                class="absolute inset-0 w-full h-full object-cover">
             <div class="absolute aspect-[16/9] inset-0 bg-gradient-to-b from-transparent to-gray-700"></div>
             <div
                 class="absolute top-8 flex flex-row px-4 items-center gap-2 w-full mt-4 sm:mt-10 lg:px-10 lg:mt-25 md:mt-28 md:px-15">
@@ -139,7 +138,9 @@
             </div>
         </section>
 
-        <section id="neurodiversity" class="px-6 mt-5 justify-center md:mt-8 lg:px-16" data-aos="fade-up">
+        <section id="neurodiversity"
+            class="px-6 mt-5 justify-center md:mt-8 lg:px-16 opacity-0 translate-y-8 transition-all duration-1000 ease-out will-change-transform"
+            data-reveal>
             <div class="p-4 bg-primary-500 rounded-lg">
                 <h2 class="text-secondary-500 text-xl font-bold md:text-2xl lg:text-4xl font-primary">
                     Let’s talk Neurodiversity
@@ -168,7 +169,7 @@
             </div>
         </section>
 
-        <section id="whatwedo" class="mt-10 scroll-mt-40" data-aos="fade-up">
+        <section id="whatwedo" class="mt-10 scroll-mt-40 opacity-0 translate-y-8 transition-all duration-1000 ease-out will-change-transform" data-reveal>
             <div
                 class="flex flex-col items-center justify-center px-8 md:flex-row md:gap-6 md:px-10 lg:px-20 lg:gap-10 xl:px-40 xl:gap-10">
                 <img src="assets/landing/Landing_page_image_3_new.webp" alt="Activity Image"
@@ -242,20 +243,22 @@
         </section>
 
         <section id="clients">
-            <h2 class="font-primary text-secondary-500 font-bold text-xl text-center mt-6 sm:text-4xl md:text-4xl md:mt-12 lg:mt-20">Our Collaborators for Change</h2>
+            <h2
+                class="font-primary text-secondary-500 font-bold text-xl text-center mt-6 sm:text-4xl md:text-4xl md:mt-12 lg:mt-20">
+                Our Collaborators for Change</h2>
             <div class="overflow-hidden py-8 mt-2 mb-2 lg:mt-6 lg:mb-6">
                 <div id="logo-track" class="logoTrack flex flex-nowrap will-change-transform w-max">
                     <div class="logo-track-content flex flex-nowrap gap-12">
                         <img src="assets/collaborators/Landing page collaborator Aajol.webp"
                             class="h-16 ml-12 w-auto lg:h-24" alt="Aajol" />
-                        <img src="assets/collaborators/Landing page collaborator Savali.webp" class="h-16 w-auto lg:h-24"
-                            alt="Savali" />
+                        <img src="assets/collaborators/Landing page collaborator Savali.webp"
+                            class="h-16 w-auto lg:h-24" alt="Savali" />
                         <img src="assets/collaborators/Langing page collaborator Aagastya.webp"
                             class="h-16 w-auto lg:h-24" alt="Aagastya" />
                         <img src="assets/collaborators/Langing page collaborator Millenium.webp"
                             class="h-16 w-auto lg:h-24" alt="Millenium" />
-                        <img src="assets/collaborators/Langing page collaborator Modern.webp" class="h-16 w-auto lg:h-24"
-                            alt="Modern" />
+                        <img src="assets/collaborators/Langing page collaborator Modern.webp"
+                            class="h-16 w-auto lg:h-24" alt="Modern" />
                         <img src="assets/collaborators/Langing page collaborator Sacred Heart.webp"
                             class="h-16 w-auto lg:h-24" alt="Sacred Heart" />
                         <img src="assets/collaborators/Langing page collaborator Smit.webp" class="h-16 w-auto lg:h-24"
@@ -373,11 +376,7 @@
         </div>
     </footer>
     <script type="module" src="main.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script>
-        AOS.init();
-    </script>
 </body>
 
 </html>
