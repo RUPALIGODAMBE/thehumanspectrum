@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="./output.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="preload" href="assets/landing/Landing_page_image_1.webp" as="Image">
+    <link rel="preload" href="assets/landing/Landing_page_image_1.webp" as="image" fetchpriority="high">
     <script src="https://kit.fontawesome.com/ecce4b4e98.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
     <title>The Human Spectrum</title>
@@ -80,8 +80,8 @@
     </header>
     <main>
         <section id="hero"
-            class="relative">
-            <img src="assets/landing/Landing_page_image_1.webp" alt="Hero Image">
+            class="relative aspect-[16/9] overflow-hidden">
+            <img src="assets/landing/Landing_page_image_1.webp" alt="Hero Image" class="absolute inset-0 w-full h-full object-cover">
             <div class="absolute aspect-[16/9] inset-0 bg-gradient-to-b from-transparent to-gray-700"></div>
             <div
                 class="absolute top-8 flex flex-row px-4 items-center gap-2 w-full mt-4 sm:mt-10 lg:px-10 lg:mt-25 md:mt-28 md:px-15">
@@ -373,7 +373,7 @@
         </div>
     </footer>
     <script type="module" src="main.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
         AOS.init();
