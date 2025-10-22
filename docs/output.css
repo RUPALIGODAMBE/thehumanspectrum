@@ -659,6 +659,9 @@
   .bg-\[url\(assets\/intervention\/Page_EI_image_1_full\.png\)\] {
     background-image: url(assets/intervention/Page_EI_image_1_full.png);
   }
+  .bg-\[url\(assets\/intervention\/Page_EI_image_1_full\.webp\)\] {
+    background-image: url(assets/intervention/Page_EI_image_1_full.webp);
+  }
   .bg-\[url\(assets\/landing\/Landing_page_image_1_comp\.webp\)\] {
     background-image: url(assets/landing/Landing_page_image_1_comp.webp);
   }
