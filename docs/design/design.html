@@ -11,7 +11,7 @@
     <title>The Human Spectrum</title>
 </head>
 
-<body class="font-secondary flex justify-center items-center flex-col p-5">
+<body class="font-secondary flex justify-center items-center flex-col p-5 bg-green-100">
     <div class="w-[30%] mt-5">
         <img src="../assets/logo_color.webp" alt="The Human Spectrum Logo" class="">
     </div>
@@ -21,17 +21,32 @@
     </p>
     <!-- <hr class="border-t-2 border-primary-500 my-6 w-1/2 mx-auto" /> -->
 
-    <h2 id="artistName" class="text-xl font-bold mt-4">Meet </h2>
-    <div class="w-[90%] max-w-sm aspect-[9/16] overflow-hidden rounded-2xl shadow-lg mt-6 hidden">
-        <iframe id="videoFrame" class="w-full h-full scale-[1.78] origin-center" title="YouTube Shorts Video" frameborder="0"
+    <h2 id="artistName" class="text-xl font-bold mt-4 font-decorative">Meet </h2>
+    <div id="videoContainer" class="relative w-[90%] max-w-sm aspect-[9/16] overflow-hidden rounded-2xl shadow-lg mt-6">
+        <div id="videoPlaceHolder" class="absolute inset-0 bg-secondary-500 animate-pulse z-10">
+        </div>
+        <iframe id="videoFrame" class="w-full h-full origin-center" title="YouTube Shorts Video" frameborder="0"
             allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen>
         </iframe>
     </div>
 
-    <h2 id="drawingName" class="mt-4"></h2>
+    <h2 class="mt-4 text-xl font-bold font-decorative">Here is What I made...</h2>
+    <h2 id="drawingName" class="mt-2 mb-2 text-2xl font-bold font-decorative text-secondary-500"></h2>
 
-    <img id="drawingImage" src="../assets/600x400_placeholder.svg" alt="">
+    <div id="imageContainer"
+        class="relative border-2 rounded-2xl overflow-hidden border-primary-500 shadow-2xl w-full max-w-sm mt-4 min-h-[200px]">
 
+        <!-- Shimmer placeholder -->
+        <div id="imagePlaceholder" class="absolute inset-0 bg-secondary-500 animate-pulse z-10"></div>
+
+        <!-- Actual image -->
+        <img id="drawingImage" src="" alt="Design Image"
+            class="w-full h-auto object-cover opacity-0 transition-opacity duration-500">
+    </div>
+
+    <div class="mt-4">
+        <a href="https://thehumanspectrum.in" class="cursor-pointer underline">Visit Us @ thehumanspectrum.in</a>
+    </div>
 
 
     <script type="module" src="design.js"></script>

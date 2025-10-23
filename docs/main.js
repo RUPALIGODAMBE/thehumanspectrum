@@ -125,8 +125,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       fetch(
-        "https://ths-google-script-proxy.braveheartask.workers.dev",
-        /*"https://ths-google-sheets-negotiator.connect-thehumanspectrum.workers.dev",*/
+        // "https://ths-google-script-proxy.braveheartask.workers.dev",
+        "https://ths-google-sheets-negotiator.connect-thehumanspectrum.workers.dev",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

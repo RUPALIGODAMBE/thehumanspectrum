@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const qrLink = document.getElementById("qrLink");
   const downloadPNG = document.getElementById("downloadPNG");
   const downloadSVG = document.getElementById("downloadSVG");
+  const generateQrForm = document.getElementById("generateQrForm");
+  const pageUrl = document.getElementById("pageUrl");
 
   console.log(spinner);
 
@@ -36,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       try {
         spinner.classList.remove("hidden");
         const res = await fetch(
-          "https://ths-google-script-proxy.braveheartask.workers.dev",
+          "https://ths-google-sheets-negotiator.connect-thehumanspectrum.workers.dev",
           {
             method: "POST",
             headers: { "content-type": "application/json" },
@@ -60,6 +62,12 @@ document.addEventListener("DOMContentLoaded", () => {
     reader.readAsDataURL(file);
   });
 
+  generateQrForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const qrForm = e.target;
+    showQRModal(qrForm.pageUrl.value);
+  });
+
   const modal = document.getElementById("qrModal");
   const closeBtn = document.getElementById("closeModal");
 
@@ -76,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
       width: 300,
       height: 300,
       data: designPageUrl,
-      image: "assets/logo_color.png",
+      image: "assets/logo_color.webp",
       dotsOptions: { color: "#000", type: "rounded" },
       backgroundOptions: { color: "#fff" },
       imageOptions: { crossOrigin: "anonymous", margin: 10 },
