@@ -169,4 +169,9 @@ document.addEventListener("DOMContentLoaded", () => {
   document
     .querySelectorAll("[data-reveal]")
     .forEach((el) => observer.observe(el));
+
+  window.addEventListener("scroll", () => {
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("bg-secondary-600/90", window.scrollY > 60);
+  });
 });
