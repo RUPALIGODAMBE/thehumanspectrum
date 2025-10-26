@@ -114,6 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   logoutBtn.addEventListener("click", () => {
     window.location.href =
-      "https://thehumanspectrum.cloudflareaccess.com/cdn-cgi/access/logout?returnTo=https://thehumanspectrum.in/admin";
+      "https://thehumanspectrum.cloudflareaccess.com/cdn-cgi/access/logout";
   });
 });
