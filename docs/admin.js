@@ -9,8 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const downloadSVG = document.getElementById("downloadSVG");
   const generateQrForm = document.getElementById("generateQrForm");
   const pageUrl = document.getElementById("pageUrl");
-
-  console.log(spinner);
+  const logoutBtn = document.getElementById("logoutBtn");
 
   artistForm.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -111,5 +110,10 @@ document.addEventListener("DOMContentLoaded", () => {
   closeModal.addEventListener("click", () => {
     qrModal.classList.add("hidden");
     qrModal.classList.remove("flex");
+  });
+
+  logoutBtn.addEventListener("click", () => {
+    window.location.href =
+      "https://thehumanspectrum.cloudflareaccess.com/cdn-cgi/access/logout?returnTo=https://thehumanspectrum.in/admin";
   });
 });

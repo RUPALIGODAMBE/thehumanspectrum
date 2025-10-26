@@ -11,12 +11,15 @@
     <title>The Human Spectrum</title>
 </head>
 
-<body class="bg-primary-500 flex justify-center items-center font-secondary">
+<body class="relative bg-primary-500 flex justify-center items-center font-secondary w-full min-h-screen">
+    <div class="absolute top-8 right-8">
+        <button id="logoutBtn" class="bg-red-500 text-white px-4 py-2 rounded-lg shadow-2xl cursor-pointer hover:bg-red-300">Logout</button>
+    </div>
     <div id="loading-overlay" class="hidden fixed items-center justify-center z-50">
         <i class="fa-solid fa-spinner fa-spin-pulse text-primary-500 text-8xl"></i>
     </div>
 
-    <div class="bg-white p-6 mt-15 rounded-2xl text-center w-[80%] max-w-2xl font-primary">
+    <div class="bg-white p-6 mt-15 rounded-2xl text-center w-[80%] max-w-2xl font-primary mb-15">
         <h1 class="text-2xl">The Human Spectrum</h1>
         <div>
             <h2 class="mt-2">Enter Details of the Artist and Design Below</h2>
