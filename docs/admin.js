@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
     qrModal.children[0].classList.add("scale-100");
 
     downloadPNG.addEventListener("click", () =>
-      qrCode.download({ extension: "png" })
+      qrCode.download({ extension: "png"})
     );
 
     downloadSVG.addEventListener("click", () =>
