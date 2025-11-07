@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const pageUrl = document.getElementById("pageUrl");
   const logoutBtn = document.getElementById("logoutBtn");
 
-  const artistName = "";
+  let artistName;
 
   artistForm.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -66,8 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
   generateQrForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     const qrForm = e.target;
-    const url = qrForm.pageUrl.value;
-    const id = url.get("id");
+    const url = new URL(qrForm.pageUrl.value);
+    const id = url.searchParams.get("id");
     if (!id) return alert("No ID Found in URL");
 
     try {
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = await res.json();
       artistName = data["Artist Name"];
     } catch (error) {
-      throw new Error("Artist Details not found");
+      alert("Artist Details not found");
     }
     showQRModal(qrForm.pageUrl.value);
   });
