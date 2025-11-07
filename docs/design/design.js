@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const videoFrame = document.getElementById("videoFrame");
   const drawingName = document.getElementById("drawingName");
   const drawingImage = document.getElementById("drawingImage");
+  const drawingFrame = document.getElementById("drawingFrame");
   const videoContaier = videoFrame.parentElement;
   const videoPlaceHolder = document.getElementById("videoPlaceHolder");
   const imagePlaceHolder = document.getElementById("imagePlaceholder");
@@ -35,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const fileId = idMatch ? idMatch[1] : null;
 
           if (fileId) {
-            drawingImage.src = `https://ths-google-sheets-negotiator.connect-thehumanspectrum.workers.dev/drive-proxy?id=${fileId}`;
+             drawingImage.src = `https://ths-google-sheets-negotiator.connect-thehumanspectrum.workers.dev/drive-proxy?id=${fileId}`;
           } else {
             drawingImage.src = imgUrl;
           }
@@ -79,6 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Fade in image
     drawingImage.classList.remove("opacity-0");
     drawingImage.classList.add("opacity-100");
+    drawingFrame.classList.remove("opacity-0");
+    drawingFrame.classList.add("opacity-100");
 
     // Fade out shimmer
     imagePlaceHolder.classList.add(

@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const pageUrl = document.getElementById("pageUrl");
   const logoutBtn = document.getElementById("logoutBtn");
 
+  const artistName = "";
+
   artistForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -64,6 +66,22 @@ document.addEventListener("DOMContentLoaded", () => {
   generateQrForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     const qrForm = e.target;
+    const url = qrForm.pageUrl.value;
+    const id = url.get("id");
+    if (!id) return alert("No ID Found in URL");
+
+    try {
+      const res = await fetch(
+        `https://ths-google-sheets-negotiator.connect-thehumanspectrum.workers.dev?id=${id}`
+      );
+      if (!res.ok) {
+        throw new Error(`Request failed due to ${res.status}`);
+      }
+      const data = await res.json();
+      artistName = data["Artist Name"];
+    } catch (error) {
+      throw new Error("Artist Details not found");
+    }
     showQRModal(qrForm.pageUrl.value);
   });
 
@@ -83,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
       width: 300,
       height: 300,
       data: designPageUrl,
-      image: "assets/logo_color.webp",
+      image: "assets/mannmade_logo.svg",
       dotsOptions: { color: "#000", type: "rounded" },
       backgroundOptions: { color: "#fff" },
       imageOptions: { crossOrigin: "anonymous", margin: 10 },
@@ -99,11 +117,11 @@ document.addEventListener("DOMContentLoaded", () => {
     qrModal.children[0].classList.add("scale-100");
 
     downloadPNG.addEventListener("click", () =>
-      qrCode.download({ extension: "png"})
+      qrCode.download({ extension: "png", name: artistName })
     );
 
     downloadSVG.addEventListener("click", () =>
-      qrCode.download({ extension: "svg" })
+      qrCode.download({ extension: "svg", name: artistName })
     );
   }
 
