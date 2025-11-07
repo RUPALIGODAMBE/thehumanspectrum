@@ -11,17 +11,28 @@
     <title>The Human Spectrum</title>
 </head>
 
-<body class="font-secondary flex justify-center items-center flex-col p-5 bg-green-100">
-    <div class="w-[30%] mt-5">
-        <img src="../assets/logo_color.webp" alt="The Human Spectrum Logo" class="">
+<body class="font-secondary flex justify-center items-center flex-col p-5 bg-white">
+    <div class="w-[40%] mt-5">
+        <img src="../assets/mannmade_logo.svg" alt="The Human Spectrum Logo" class="">
     </div>
-    <h1 class="font-decorative font-bold text-2xl mt-2 text-secondary-500">We Are The Human Spectrum</h1>
-    <p>
-        Place Holder Text About Brand
+    <h1 class="font-primary font-bold text-3xl mt-2 text-black">MannMade</h1>
+    <p class="mt-4 text-gray-500 text-lg px-1 text-justify">
+        This T-shirt carries artwork created by a neurodivergent artist, born from a space of honesty and pure
+        expression through expressive art sessions.These pieces weren’t made to impress; they were created from the
+        heart. MannMade is a reminder that we are all more than our limitations.When environments open up and barriers
+        fade, what remains is just human potential, expressed differently, beautifully.This space is as much for the
+        artists who create as it is for the world that is enriched by their expression.
     </p>
     <!-- <hr class="border-t-2 border-primary-500 my-6 w-1/2 mx-auto" /> -->
+    <h2 class="font-primary mt-4 text-2xl font-bold text-secondary-500">You are okay. I am okay.</h2>
+    <h2 class="font-primary mt-2 text-xl font-bold text-secondary-500">तू भी ठीक है। मैं भी ठीक हूँ।</h2>
 
-    <h2 id="artistName" class="text-xl font-bold mt-4 font-decorative">Meet </h2>
+    <div>
+        <img class="w-18 mt-4" src="../assets/design/pencil.webp" alt="">
+    </div>
+
+    <h2 id="artistName" class="text-xl font-bold mt-4 font-primary text-gray-500">Meet The Artist</h2>
+
     <div id="videoContainer" class="relative w-[90%] max-w-sm aspect-[9/16] overflow-hidden rounded-2xl shadow-lg mt-6">
         <div id="videoPlaceHolder" class="absolute inset-0 bg-secondary-500 animate-pulse z-10">
         </div>
@@ -30,22 +41,31 @@
         </iframe>
     </div>
 
-    <h2 class="mt-4 text-xl font-bold font-decorative">Here is What I made...</h2>
-    <h2 id="drawingName" class="mt-2 mb-2 text-2xl font-bold font-decorative text-secondary-500"></h2>
-
-    <div id="imageContainer"
-        class="relative border-2 rounded-2xl overflow-hidden border-primary-500 shadow-2xl w-full max-w-sm mt-4 min-h-[200px]">
-
-        <!-- Shimmer placeholder -->
-        <div id="imagePlaceholder" class="absolute inset-0 bg-secondary-500 animate-pulse z-10"></div>
-
-        <!-- Actual image -->
-        <img id="drawingImage" src="" alt="Design Image"
-            class="w-full h-auto object-cover opacity-0 transition-opacity duration-500">
+    <div>
+        <img class="w-20 mt-4" src="../assets/design/bird.webp" alt="">
     </div>
 
-    <div class="mt-4">
-        <a href="https://thehumanspectrum.in" class="cursor-pointer underline">Visit Us @ thehumanspectrum.in</a>
+    <h2 class="mt-4 text-2xl font-bold font-primary text-secondary-500">Here is What I made...</h2>
+
+    <h2 id="drawingName" class="mt-2 mb-0 text-2xl font-bold font-primary text-gray-500"></h2>
+
+    <div id="imageContainer" class="relative w-full max-w-sm aspect-square mx-auto overflow-hidden">
+        <div id="imagePlaceholder" class="absolute inset-0 bg-secondary-500 animate-pulse z-10 rounded-2xl"></div>
+        <img id="drawingImage" src="" alt="Design Image"
+            class="absolute top-1/2 left-1/2 w-full h-auto max-h-full -translate-x-1/2 -translate-y-1/2 object-contain scale-80 opacity-0 transition-opacity duration-500">
+        <img id="drawingFrame"
+            class="absolute inset-0 w-full h-full object-contain pointer-events-none opacity-0 transition-opacity duration-500"
+            src="../assets/design/picture_frame.webp" alt="">
+    </div>
+
+    <div class="mt-4 flex items-end justify-end">
+        <div>
+            <p>Visit Us :</p>
+            <a href="https://thehumanspectrum.in/mannmade" class="cursor-pointer underline">thehumanspectrum.in/mannmade</a>
+        </div>
+        <div class="w-14">
+            <img src="../assets/logo_color.webp" alt="">
+        </div>
     </div>
 
 
