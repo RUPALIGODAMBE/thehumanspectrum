@@ -100,6 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
     qrContainer.innerHTML = "";
 
     const qrCode = new QRCodeStyling({
+      type: "svg",
       width: size,
       height: size,
       data: designPageUrl,
