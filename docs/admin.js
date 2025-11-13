@@ -101,8 +101,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const qrCode = new QRCodeStyling({
       type: "svg",
-      width: size,
-      height: size,
+      width: 512,
+      height: 512,
       data: designPageUrl,
       image: "assets/mannmade_logo.svg",
       dotsOptions: { color: "#000", type: "rounded" },
