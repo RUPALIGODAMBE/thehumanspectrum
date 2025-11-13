@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const pageUrl = document.getElementById("pageUrl");
   const logoutBtn = document.getElementById("logoutBtn");
 
+  const size = Math.min(window.innerWidth * 0.8, 1024);
+
   let artistName;
 
   artistForm.addEventListener("submit", async (e) => {
@@ -98,8 +100,8 @@ document.addEventListener("DOMContentLoaded", () => {
     qrContainer.innerHTML = "";
 
     const qrCode = new QRCodeStyling({
-      width: 300,
-      height: 300,
+      width: size,
+      height: size,
       data: designPageUrl,
       image: "assets/mannmade_logo.svg",
       dotsOptions: { color: "#000", type: "rounded" },
