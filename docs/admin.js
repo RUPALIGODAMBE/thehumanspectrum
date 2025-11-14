@@ -8,10 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const downloadPNG = document.getElementById("downloadPNG");
   const downloadSVG = document.getElementById("downloadSVG");
   const generateQrForm = document.getElementById("generateQrForm");
-  const pageUrl = document.getElementById("pageUrl");
   const logoutBtn = document.getElementById("logoutBtn");
 
   const size = Math.min(window.innerWidth * 0.8, 1024);
+
+  let currentQrCode = null;
+  let currentArtistName = "";
 
   artistForm.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -96,8 +98,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showQRModal(designPageUrl, artistName) {
     qrContainer.innerHTML = "";
-
-    const qrCode = new QRCodeStyling({
+    console.log(artistName);
+    currentQrCode = new QRCodeStyling({
       type: "svg",
       width: 512,
       height: 512,
@@ -108,7 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
       imageOptions: { crossOrigin: "anonymous", margin: 10 },
       qrOptions: { errorCorrectionLevel: "H" },
     });
-    qrCode.append(qrContainer);
+    currentArtistName = artistName;
+    currentQrCode.append(qrContainer);
     qrLink.textContent = designPageUrl;
     qrLink.href = designPageUrl;
 
@@ -117,13 +120,17 @@ document.addEventListener("DOMContentLoaded", () => {
     qrModal.children[0].classList.remove("scale-95");
     qrModal.children[0].classList.add("scale-100");
 
-    downloadPNG.addEventListener("click", () =>
-      qrCode.download({ extension: "png", name: artistName })
-    );
+    downloadPNG.addEventListener("click", () => {
+      if (currentQrCode) {
+        currentQrCode.download({ extension: "png", name: currentArtistName });
+      }
+    });
 
-    downloadSVG.addEventListener("click", () =>
-      qrCode.download({ extension: "svg", name: artistName })
-    );
+    downloadSVG.addEventListener("click", () => {
+      if (currentQrCode) {
+        currentQrCode.download({ extension: "svg", name: currentArtistName });
+      }
+    });
   }
 
   closeModal.addEventListener("click", () => {
