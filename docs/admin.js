@@ -13,8 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const size = Math.min(window.innerWidth * 0.8, 1024);
 
-  let artistName;
-
   artistForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -52,8 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const data = await res.json();
         spinner.classList.add("hidden");
         artistForm.reset();
-        const { designPageUrl } = data;
-        showQRModal(designPageUrl);
+        const { designPageUrl, artistName } = data;
+        showQRModal(designPageUrl, artistName);
       } catch (err) {
         alert(err.message);
       } finally {
@@ -71,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const url = new URL(qrForm.pageUrl.value);
     const id = url.searchParams.get("id");
     if (!id) return alert("No ID Found in URL");
-
+    let aName;
     try {
       const res = await fetch(
         `https://ths-google-sheets-negotiator.connect-thehumanspectrum.workers.dev?id=${id}`
@@ -80,11 +78,11 @@ document.addEventListener("DOMContentLoaded", () => {
         throw new Error(`Request failed due to ${res.status}`);
       }
       const data = await res.json();
-      artistName = data["Artist Name"];
+      aName = data["Artist Name"];
     } catch (error) {
       alert("Artist Details not found");
     }
-    showQRModal(qrForm.pageUrl.value);
+    showQRModal(qrForm.pageUrl.value, aName);
   });
 
   const modal = document.getElementById("qrModal");
@@ -96,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   closeBtn.addEventListener("click", hideModal);
 
-  function showQRModal(designPageUrl) {
+  function showQRModal(designPageUrl, artistName) {
     qrContainer.innerHTML = "";
 
     const qrCode = new QRCodeStyling({
