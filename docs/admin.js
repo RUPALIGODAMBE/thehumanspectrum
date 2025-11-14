@@ -98,7 +98,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showQRModal(designPageUrl, artistName) {
     qrContainer.innerHTML = "";
-    console.log(artistName);
     currentQrCode = new QRCodeStyling({
       type: "svg",
       width: 512,
