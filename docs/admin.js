@@ -10,10 +10,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const generateQrForm = document.getElementById("generateQrForm");
   const logoutBtn = document.getElementById("logoutBtn");
 
-  const size = Math.min(window.innerWidth * 0.8, 1024);
-
   let currentQrCode = null;
   let currentArtistName = "";
+
+  downloadPNG.addEventListener("click", () => {
+    if (currentQrCode) {
+      currentQrCode.download({ extension: "png", name: currentArtistName });
+    }
+  });
+
+  downloadSVG.addEventListener("click", () => {
+    if (currentQrCode) {
+      currentQrCode.download({ extension: "svg", name: currentArtistName });
+    }
+  });
 
   artistForm.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -98,7 +108,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showQRModal(designPageUrl, artistName) {
     qrContainer.innerHTML = "";
-    console.log(artistName);
     currentQrCode = new QRCodeStyling({
       type: "svg",
       width: 512,
@@ -119,19 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
     qrModal.classList.add("flex");
     qrModal.children[0].classList.remove("scale-95");
     qrModal.children[0].classList.add("scale-100");
-
-    downloadPNG.addEventListener("click", () => {
-      if (currentQrCode) {
-        console.log(currentArtistName);
-        currentQrCode.download({ extension: "png", name: currentArtistName });
-      }
-    });
-
-    downloadSVG.addEventListener("click", () => {
-      if (currentQrCode) {
-        currentQrCode.download({ extension: "svg", name: currentArtistName });
-      }
-    });
   }
 
   closeModal.addEventListener("click", () => {
