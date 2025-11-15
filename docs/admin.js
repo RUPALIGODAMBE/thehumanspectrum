@@ -28,6 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
   artistForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    console.log("artistForm submit fired");
+
     const form = e.target;
 
     const file = form.drawingImage.files[0];
@@ -107,6 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
   closeBtn.addEventListener("click", hideModal);
 
   function showQRModal(designPageUrl, artistName) {
+    console.log("showQRModal called from", designPageUrl, artistName);
     qrContainer.innerHTML = "";
     currentQrCode = new QRCodeStyling({
       type: "svg",
