@@ -98,6 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showQRModal(designPageUrl, artistName) {
     qrContainer.innerHTML = "";
+    console.log(artistName);
     currentQrCode = new QRCodeStyling({
       type: "svg",
       width: 512,
@@ -121,6 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     downloadPNG.addEventListener("click", () => {
       if (currentQrCode) {
+        console.log(currentArtistName);
         currentQrCode.download({ extension: "png", name: currentArtistName });
       }
     });
